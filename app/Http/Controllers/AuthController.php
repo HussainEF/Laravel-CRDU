@@ -59,12 +59,12 @@ class AuthController extends Controller
         if(Auth::check()){
             return view('home');
         }
-        return view('home');
+        // return view('home');
 
         /* $test = Auth::check();
         var_dump($test);
         var_dump(Request('name')); */
-        // return Redirect::to('login')->withSuccess('You have not logged in. or You dont have an account');
+        return Redirect::to('login')->withSuccess('You have not logged in. or You dont have an account');
     }
 
     public function create(array $data){
