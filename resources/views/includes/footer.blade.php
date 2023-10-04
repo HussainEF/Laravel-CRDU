@@ -1,1 +1,1 @@
-<div id="copyright text-right">© Copyright 2017 Mudassar Hussain </div>
+<div id="copyright">© Copyright 2017 Mudassar Hussain </div>
