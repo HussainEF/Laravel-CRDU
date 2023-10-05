@@ -36,5 +36,5 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('register', 'App\Http\Controllers\AuthController@register');
     Route::post('post-register', 'App\Http\Controllers\AuthController@postRegister');
     Route::get('home', 'App\Http\Controllers\AuthController@home');
-    Route::post('logout', 'App\Http\Controllers\AuthController@logout');
+    Route::get('logout', 'App\Http\Controllers\AuthController@logout');
 });

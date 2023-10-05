@@ -4,7 +4,7 @@
         @include('includes.header')
     </header>
     <div class="row p-0">
-        <div class="col-md-3">
+        <div class="col-md-3 d-flex justify-content-center align-items-center sidebar">
             @include('includes.sidebar')
         </div>
         <div class="col-md-9">
@@ -29,11 +29,13 @@
                                 <label for="option3">Option 3.</label>
                                 <textarea class="rounded p-2 t-area" name="opt3" id="option3" cols="30" rows="1"></textarea>
                             </div>
+                            <div id="addOption">
+                            </div>
                             <div class="form-group">
-                                <button class="btn btn-secondary"><i class="fa-solid fa-plus"></i> Add Options</button>
+                                <button type="button" onclick="addOptionFunc()" class="btn btn-secondary"><i class="fa-solid fa-plus"></i> Add Options</button> 
                             </div>
                             <div class="form-group d-flex justify-content-end mb-2">
-                                <button class="btn btn-style me-2">Save Poll</button>
+                                <button type="submit" class="btn btn-style me-2">Save Poll</button>
                                 <button class="btn btn-style">Refresh</button>
                             </div>
                         </form>

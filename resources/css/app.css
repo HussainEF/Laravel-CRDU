@@ -4,9 +4,10 @@
 
 .header{
     background-color: #1E3050 !important;
+    height: auto;
 }
 
-.header-style>h1{
+.header-color{
     color:#D5D5D5 !important;
 }
 
