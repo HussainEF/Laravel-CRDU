@@ -12,7 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('voters', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('name', 50);
+            $table->string('email', 50);//Try Unique() here
+            $table->string('contact', 11);
+            // Foreign key and Constraints
+            $table->unsignedBigInteger('q_id');
+            $table->foreign('q_id')->references('id')->on('questions');
+            $table->string('selected_option', 7);//Try enum here
             $table->timestamps();
         });
     }

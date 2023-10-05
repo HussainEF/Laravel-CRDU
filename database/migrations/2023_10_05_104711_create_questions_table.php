@@ -12,8 +12,19 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('questions', function (Blueprint $table) {
-            $table->increments('id');
-            // $table->increments('u_id');
+            $table->id();
+
+            //Foreign Key and Constraints
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
+
+            $table->text('question');
+            $table->string('option1', 50);
+            $table->string('option2', 50);
+            $table->string('option3', 50);
+            $table->string('option4', 50);
+            $table->string('option5', 50);
+            $table->string('option6', 50);
             $table->timestamps();
         });
     }
