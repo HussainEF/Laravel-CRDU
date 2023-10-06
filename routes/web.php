@@ -38,3 +38,5 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('home', 'App\Http\Controllers\AuthController@home');
     Route::get('logout', 'App\Http\Controllers\AuthController@logout');
 });
+
+Route::post('poll-creation', 'App\Http\Controllers\QuestionController@pollCreation');
