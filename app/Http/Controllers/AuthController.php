@@ -7,6 +7,7 @@ use Validator, Redirect, Response;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Session;
+use DB;
 
 class AuthController extends Controller
 {
@@ -29,11 +30,7 @@ class AuthController extends Controller
         if(Auth::attempt($credentials)){
             //Authentication passed ...
             return redirect()->intended('home');
-            // var_dump($request['email']);
         }
-        /* else{
-            var_dump(Request('password'));
-        } */
 
         return Redirect::to("login")->withSuccess('Oppoes! You have enteren worng email or password');
     }
@@ -50,20 +47,15 @@ class AuthController extends Controller
         $data = $request->all();
         $check = $this->create($data);
         return Redirect::to('home')->withSuccess('Your Have Registered Successuflly');
-
-        // var_dump(Request('name'));
-        // var_dump($request['name']);
     }
 
-    public function home(){
+    public function home(Request $request){
         if(Auth::check()){
-            return view('home');
+            $fk=auth()->user()->id;//getting current logged in user id for displaying data of only logged in user
+            $polls = DB::table('questions')->select('question', 'created_at')->where('user_id',$fk)->get();
+            return view('home',compact('polls', 'fk'));
         }
-        // return view('home');
 
-        /* $test = Auth::check();
-        var_dump($test);
-        var_dump(Request('name')); */
         return Redirect::to('login')->withSuccess('You have not logged in. or You dont have an account');
     }
 

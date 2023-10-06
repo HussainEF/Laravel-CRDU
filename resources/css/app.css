@@ -27,11 +27,15 @@
     background-color: #D5D5D5;
 }
 
-.color{
-    color: white;
+.custome-color{
+    color: #D5D5D5 !important;
 }
 
 .t-area{
     background-color: #D5D5D5;
     outline: #1E3050;
+}
+
+.poll-question-card{
+    background-color: #1E3050 !important;
 }

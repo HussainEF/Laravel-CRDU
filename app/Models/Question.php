@@ -9,14 +9,18 @@ class Question extends Model
 {
     use HasFactory;
     protected $fillable = [
+        'user_id',
         'question',
         'option1',
         'option2',
         'option3',
+        'option4',
+        'option5',
+        'option6',
     ];
 
     protected $attributes = [
-        'user_id' => 1,
+        'option3' => 1,
         'option4' => 1,
         'option5' => 1,
         'option6' => 1,
