@@ -52,7 +52,7 @@ class AuthController extends Controller
     public function home(Request $request){
         if(Auth::check()){
             $fk=auth()->user()->id;//getting current logged in user id for displaying data of only logged in user
-            $polls = DB::table('questions')->select('question', 'created_at')->where('user_id',$fk)->get();
+            $polls = DB::table('questions')->select('id', 'question', 'created_at')->where('user_id',$fk)->get();
             return view('home',compact('polls', 'fk'));
         }
 

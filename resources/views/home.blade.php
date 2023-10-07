@@ -8,7 +8,7 @@
             @include('includes.sidebar')
         </div>
         <div class="col-md-9">
-            <div class="row">
+            <div class="row blueish-color">
                 <div class="col-md-6 p-2">
                     <div class="poll-card rounded">
                         <h3 class="poll-title d-flex justify-content-center">Create Polls</h3>
@@ -36,19 +36,19 @@
                                 <button type="button" onclick="addOptionFunc()" class="btn btn-secondary"><i class="fa-solid fa-plus"></i> Add Options</button> 
                             </div>
                             <div class="form-group d-flex justify-content-end mb-2">
-                                <button type="submit" class="btn btn-style me-2">Save Poll</button>
-                                <button class="btn btn-style">Refresh</button>
+                                <button type="submit" class="btn btn-style me-2"><i class="fa-regular fa-floppy-disk"></i>  Save Poll</button>
+                                <button class="btn btn-style"><i class="fa-solid fa-arrows-rotate"></i> Refresh</button>
                             </div>
                         </form>
                     </div>
                 </div>
-                <div class="col-md-6">
-
+                <div id="test" class="col-md-6 p-2">
+                    
                 </div>
             </div>
         </div>
     </div>
-    <footer class="row bg-secondary d-flex justify-content-end">
+    <footer class="row bg-secondary d-flex justify-content-end blueish-color">
         @include('includes.footer')
     </footer>
 @endsection

@@ -1,7 +1,3 @@
-*{
-    color: #1E3050;
-}
-
 .header{
     background-color: #1E3050 !important;
     height: auto;
@@ -23,12 +19,23 @@
     color:#D5D5D5 !important;
 }
 
-.poll-title{
-    background-color: #D5D5D5;
+.btn-style:hover{
+    border: 2px solid #1E3050 !important;
+    background-color: #D5D5D5 !important;
+    color: #1E3050 !important;
 }
 
-.custome-color{
+.poll-title{
+    background-color: #D5D5D5;
+    color: #1E3050;
+}
+
+.greyish-color{
     color: #D5D5D5 !important;
+}
+
+.blueish-color{
+    color: #1E3050 !important;
 }
 
 .t-area{
@@ -36,6 +43,37 @@
     outline: #1E3050;
 }
 
-.poll-question-card{
+      
+/* CSS Style for Sidebar Question Link */
+.sidebar-question-link{
     background-color: #1E3050 !important;
+    text-decoration: none;
+    color:#D5D5D5 !important;
+    cursor: pointer;
+}
+
+a.sidebar-question-link:hover {
+    border: 2px solid #1E3050 !important;
+    background-color: #D5D5D5 !important;
+    color: #1E3050 !important;
+}
+
+/* CSS Style for Showing Polling Card upon Click on Poll Question Link */
+.show-poll{
+    border: 2px solid #D5D5D5;
+}
+
+.show-poll-option-number{
+    background-color:#1E3050;
+    border-left: 1px solid #1E3050;
+    border-top: 1px solid #1E3050;
+    border-bottom: 1px solid #1E3050;
+    color: #D5D5D5 !important;
+}
+
+.show-poll-option-detail{
+    color:#1E3050;
+    border-right: 1px solid #1E3050 !important;
+    border-top: 1px solid #1E3050 !important;
+    border-bottom: 1px solid #1E3050 !important;
 }
