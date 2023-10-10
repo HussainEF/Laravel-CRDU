@@ -2,7 +2,7 @@
     <h3 class="mb-4 ms-5 me-5 blueish-color">Polls Hoistory</h3>
     @foreach($polls as $polldata)
         <div class="row mb-2">
-            <a onclick="pollData('poll-data', {{$polldata->id}})" class="col-md-12 rounded sidebar-question-link p-2">
+            <a id="name{{$polldata->id}}" onclick="pollData('poll-data', {{$polldata->id}})" class="col-md-12 rounded sidebar-question-link p-2">
                 {{ csrf_field() }}
                 <div class="d-flex justify-content-start">
                     {{$polldata->question}}

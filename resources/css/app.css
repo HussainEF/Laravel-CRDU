@@ -77,3 +77,15 @@ a.sidebar-question-link:hover {
     border-top: 1px solid #1E3050 !important;
     border-bottom: 1px solid #1E3050 !important;
 }
+
+/* Styles for Pollig/Voting View */
+.poll-form-border{
+    border:2px solid #D5D5D5 !important;
+}
+
+.poll-form-option:hover{
+    border-radius: 0.390rem;
+    background-color: #D5D5D5 !important;
+    cursor: pointer;
+    border: 1px solid #1E3050 !important;
+}
