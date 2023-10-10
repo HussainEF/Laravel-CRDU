@@ -27,32 +27,32 @@
                         <hr>
                         <div class="poll-form-border rounded p-3">
                             <h4 class="mb-5"><i class="fa-solid fa-square-poll-horizontal"></i>  <i class="fa-regular fa-circle-question"></i></h4>
-                            <div class="form-row form-group mb-2 d-flex poll-form-option">
+                            <div id="opt1" onclick="test()" class="form-row form-group mb-2 d-flex poll-form-option">
                                 <div class="col-md-2 rounded-start ps-1 pe-1 pt-2 pb-2 d-flex justify-content-center show-poll-option-number">Option-1</div>
                                 <div class="col-md-10 rounded-end p-2 show-poll-option-detail">
                                 </div>
                             </div>
-                            <div class="form-row form-group mb-2 d-flex poll-form-option">
+                            <div id="opt2" class="form-row form-group mb-2 d-flex poll-form-option">
                                 <div class="col-md-2 rounded-start ps-1 pe-1 pt-2 pb-2 d-flex justify-content-center show-poll-option-number">Option-2</div>
                                 <div class="col-md-10 rounded-end p-2 show-poll-option-detail">
                                 </div>
                             </div>
-                            <div class="form-row form-group mb-2 d-flex poll-form-option">
+                            <div id="opt3" class="form-row form-group mb-2 d-flex poll-form-option">
                                 <div class="col-md-2 rounded-start ps-1 pe-1 pt-2 pb-2 d-flex justify-content-center show-poll-option-number">Option-3</div>
                                 <div class="col-md-10 rounded-end p-2 show-poll-option-detail">
                                 </div>
                             </div>
-                            <div class="form-row form-group mb-2 d-flex poll-form-option">
+                            <div id="opt4" class="form-row form-group mb-2 d-flex poll-form-option">
                                 <div class="col-md-2 rounded-start ps-1 pe-1 pt-2 pb-2 d-flex justify-content-center show-poll-option-number">Option-4</div>
                                 <div class="col-md-10 rounded-end p-2 show-poll-option-detail">
                                 </div>
                             </div>
-                            <div class="form-row form-group mb-2 d-flex poll-form-option">
+                            <div id="opt5" class="form-row form-group mb-2 d-flex poll-form-option">
                                 <div class="col-md-2 rounded-start ps-1 pe-1 pt-2 pb-2 d-flex justify-content-center show-poll-option-number">Option-5</div>
                                 <div class="col-md-10 rounded-end p-2 show-poll-option-detail">
                                 </div>
                             </div>
-                            <div class="form-row form-group mb-4 d-flex poll-form-option">
+                            <div id="opt6" class="form-row form-group mb-4 d-flex poll-form-option">
                                 <div class="col-md-2 rounded-start ps-1 pe-1 pt-2 pb-2 d-flex justify-content-center show-poll-option-number">Option-6</div>
                                 <div class="col-md-10 rounded-end p-2 show-poll-option-detail">
                                 </div>

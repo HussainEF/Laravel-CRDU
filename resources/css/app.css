@@ -89,3 +89,10 @@ a.sidebar-question-link:hover {
     cursor: pointer;
     border: 1px solid #1E3050 !important;
 }
+
+.poll-option-selected{
+    border-radius: 0.390rem;
+    background-color: #D5D5D5 !important;
+    cursor: pointer;
+    border: 1px solid #1E3050 !important;
+}

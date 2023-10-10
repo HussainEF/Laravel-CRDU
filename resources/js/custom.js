@@ -11,6 +11,13 @@ function addOptionFunc(){
     </div>`;
 }
 
+window.test = test;
+function test(){
+    console.log("done");
+    // jquery line
+    this.addClass("poll-option-selected");
+}
+
 //Load Poll Data from Database into Card
 window.pollData = pollData;
 /* function pollData(route, q_id){
