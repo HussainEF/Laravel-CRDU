@@ -28,37 +28,37 @@
                         <div class="poll-form-border rounded p-3">
                             @foreach ($data as $data)
                             <h4 class="mb-5"><i class="fa-solid fa-square-poll-horizontal"></i> {{$data->question}} <i class="fa-regular fa-circle-question"></i></h4>
-                            <div class="form-row form-group mb-2 d-flex poll-form-option">
+                            <div id="option1" class="form-row form-group mb-2 d-flex poll-form-option">
                                 <input id="opt1" type="radio" name="vote" class="col-md-2 rounded-start ps-1 pe-1 pt-2 pb-2 d-flex justify-content-center">
                                 <label for="opt1" class="col-md-10 rounded-end p-2">
                                     {{$data->option1}}
                                 </label>
                             </div>
-                            <div class="form-row form-group mb-2 d-flex poll-form-option">
+                            <div id="option2" class="form-row form-group mb-2 d-flex poll-form-option">
                                 <input id="opt2" type="radio" name="vote" class="col-md-2 rounded-start ps-1 pe-1 pt-2 pb-2 d-flex justify-content-center">
                                 <label for="opt2" class="col-md-10 rounded-end p-2">
                                     {{$data->option2}}
                                 </label>
                             </div>
-                            <div class="form-row form-group mb-2 d-flex poll-form-option">
+                            <div id="option3" class="form-row form-group mb-2 d-flex poll-form-option">
                                 <input id="opt3" type="radio" name="vote" class="col-md-2 rounded-start ps-1 pe-1 pt-2 pb-2 d-flex justify-content-center">
                                 <label for="opt3" class="col-md-10 rounded-end p-2">
                                     {{$data->option3}}
                                 </label>
                             </div>
-                            <div class="form-row form-group mb-2 d-flex poll-form-option">
+                            <div id="option4" class="form-row form-group mb-2 d-flex poll-form-option">
                                 <input id="opt4" type="radio" name="vote" class="col-md-2 rounded-start ps-1 pe-1 pt-2 pb-2 d-flex justify-content-center">
                                 <label for="opt4" class="col-md-10 rounded-end p-2">
                                     {{$data->option4}}
                                 </label>
                             </div>
-                            <div class="form-row form-group mb-2 d-flex poll-form-option">
+                            <div id="option5" class="form-row form-group mb-2 d-flex poll-form-option">
                                 <input id="opt5" type="radio" name="vote" class="col-md-2 rounded-start ps-1 pe-1 pt-2 pb-2 d-flex justify-content-center">
                                 <label for="opt5" class="col-md-10 rounded-end p-2">
                                     {{$data->option5}}
                                 </label>
                             </div>
-                            <div class="form-row form-group mb-2 d-flex poll-form-option">
+                            <div id="option6" class="form-row form-group mb-2 d-flex poll-form-option">
                                 <input id="opt6" type="radio" name="vote" class="col-md-2 rounded-start ps-1 pe-1 pt-2 pb-2 d-flex justify-content-center">
                                 <label for="opt6" class="col-md-10 rounded-end p-2">
                                     {{$data->option6}}

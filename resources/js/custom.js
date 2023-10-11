@@ -11,10 +11,30 @@ $(document).ready(function(){
             <textarea class='rounded p-2 t-area' name='opt${counter}' id='option${counter}' cols='30' rows='1'></textarea>
         </div>`;
     }
-
-    window.testFunc = testFunc;
     
-    $("input[name='vote']").prop("checked");
+    $("input[type='radio']").change(function() {
+        var id=$(this).attr('id');
+        var optionId;
+        if(id==="opt1"){
+            optionId=1;
+        }else if(id==="opt2"){
+            optionId=2;
+        }else if(id==="opt3"){
+            optionId=3;
+        }else if(id==="opt4"){
+            optionId=4;
+        }else if(id==="opt5"){
+            optionId=5;
+        }else {
+            optionId=6;
+        }
+            $("#option"+optionId).removeClass("poll-option-selected");
+            console.log("remove"+ optionId);
+        if($(this).is(":checked")) {
+            console.log("add"+ optionId);
+            $("#option"+optionId).addClass("poll-option-selected");
+        }
+    });
 
     //Load Poll Data from Database into Card
     window.pollData = pollData;
