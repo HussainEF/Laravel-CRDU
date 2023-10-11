@@ -41,4 +41,4 @@ Route::group(['middleware' => 'web'], function () {
 
 Route::post('poll-creation', 'App\Http\Controllers\QuestionController@pollCreation');
 Route::get('poll-data', 'App\Http\Controllers\AjaxController@pollData');
-Route::get('polling', 'App\Http\Controllers\PollingController@pollForm');
+Route::get('polling/{id}', 'App\Http\Controllers\PollingController@pollForm')->name('polling');

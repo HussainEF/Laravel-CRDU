@@ -26,36 +26,43 @@
                         </div>
                         <hr>
                         <div class="poll-form-border rounded p-3">
-                            <h4 class="mb-5"><i class="fa-solid fa-square-poll-horizontal"></i>  <i class="fa-regular fa-circle-question"></i></h4>
-                            <div id="opt1" onclick="test()" class="form-row form-group mb-2 d-flex poll-form-option">
-                                <div class="col-md-2 rounded-start ps-1 pe-1 pt-2 pb-2 d-flex justify-content-center show-poll-option-number">Option-1</div>
-                                <div class="col-md-10 rounded-end p-2 show-poll-option-detail">
-                                </div>
+                            @foreach ($data as $data)
+                            <h4 class="mb-5"><i class="fa-solid fa-square-poll-horizontal"></i> {{$data->question}} <i class="fa-regular fa-circle-question"></i></h4>
+                            <div class="form-row form-group mb-2 d-flex poll-form-option">
+                                <input id="opt1" type="radio" name="vote" class="col-md-2 rounded-start ps-1 pe-1 pt-2 pb-2 d-flex justify-content-center">
+                                <label for="opt1" class="col-md-10 rounded-end p-2">
+                                    {{$data->option1}}
+                                </label>
                             </div>
-                            <div id="opt2" class="form-row form-group mb-2 d-flex poll-form-option">
-                                <div class="col-md-2 rounded-start ps-1 pe-1 pt-2 pb-2 d-flex justify-content-center show-poll-option-number">Option-2</div>
-                                <div class="col-md-10 rounded-end p-2 show-poll-option-detail">
-                                </div>
+                            <div class="form-row form-group mb-2 d-flex poll-form-option">
+                                <input id="opt2" type="radio" name="vote" class="col-md-2 rounded-start ps-1 pe-1 pt-2 pb-2 d-flex justify-content-center">
+                                <label for="opt2" class="col-md-10 rounded-end p-2">
+                                    {{$data->option2}}
+                                </label>
                             </div>
-                            <div id="opt3" class="form-row form-group mb-2 d-flex poll-form-option">
-                                <div class="col-md-2 rounded-start ps-1 pe-1 pt-2 pb-2 d-flex justify-content-center show-poll-option-number">Option-3</div>
-                                <div class="col-md-10 rounded-end p-2 show-poll-option-detail">
-                                </div>
+                            <div class="form-row form-group mb-2 d-flex poll-form-option">
+                                <input id="opt3" type="radio" name="vote" class="col-md-2 rounded-start ps-1 pe-1 pt-2 pb-2 d-flex justify-content-center">
+                                <label for="opt3" class="col-md-10 rounded-end p-2">
+                                    {{$data->option3}}
+                                </label>
                             </div>
-                            <div id="opt4" class="form-row form-group mb-2 d-flex poll-form-option">
-                                <div class="col-md-2 rounded-start ps-1 pe-1 pt-2 pb-2 d-flex justify-content-center show-poll-option-number">Option-4</div>
-                                <div class="col-md-10 rounded-end p-2 show-poll-option-detail">
-                                </div>
+                            <div class="form-row form-group mb-2 d-flex poll-form-option">
+                                <input id="opt4" type="radio" name="vote" class="col-md-2 rounded-start ps-1 pe-1 pt-2 pb-2 d-flex justify-content-center">
+                                <label for="opt4" class="col-md-10 rounded-end p-2">
+                                    {{$data->option4}}
+                                </label>
                             </div>
-                            <div id="opt5" class="form-row form-group mb-2 d-flex poll-form-option">
-                                <div class="col-md-2 rounded-start ps-1 pe-1 pt-2 pb-2 d-flex justify-content-center show-poll-option-number">Option-5</div>
-                                <div class="col-md-10 rounded-end p-2 show-poll-option-detail">
-                                </div>
+                            <div class="form-row form-group mb-2 d-flex poll-form-option">
+                                <input id="opt5" type="radio" name="vote" class="col-md-2 rounded-start ps-1 pe-1 pt-2 pb-2 d-flex justify-content-center">
+                                <label for="opt5" class="col-md-10 rounded-end p-2">
+                                    {{$data->option5}}
+                                </label>
                             </div>
-                            <div id="opt6" class="form-row form-group mb-4 d-flex poll-form-option">
-                                <div class="col-md-2 rounded-start ps-1 pe-1 pt-2 pb-2 d-flex justify-content-center show-poll-option-number">Option-6</div>
-                                <div class="col-md-10 rounded-end p-2 show-poll-option-detail">
-                                </div>
+                            <div class="form-row form-group mb-2 d-flex poll-form-option">
+                                <input id="opt6" type="radio" name="vote" class="col-md-2 rounded-start ps-1 pe-1 pt-2 pb-2 d-flex justify-content-center">
+                                <label for="opt6" class="col-md-10 rounded-end p-2">
+                                    {{$data->option6}}
+                                </label>
                             </div>
                             <div class="form-row form-group d-flex mb-4">
                                 <div class="col-md-4 d-flex justify-content-start">
@@ -65,6 +72,7 @@
                                     <button class="btn btn-style"><i class="fa-regular fa-pen-to-square"></i> Submit</button> 
                                 </div>
                             </div>
+                            @endforeach
                         </div>
                     </form>
                 </div>

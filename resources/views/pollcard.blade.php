@@ -40,7 +40,7 @@
                             </div>
                             <div class="form-row form-group d-flex mb-4">
                                 <div class="col-md-4 d-flex justify-content-center">
-                                    <a href="{{url('polling')}}" class="btn btn-style"><i class="fa-solid fa-share"></i> Share</a>
+                                    <a href="{{route('polling', $data->id)}}" class="btn btn-style"><i class="fa-solid fa-share"></i> Share</a>
                                 </div>
                                 <div class="col-md-4 d-flex justify-content-center">
                                     <button class="btn btn-style"><i class="fa-regular fa-pen-to-square"></i> Update</button> 

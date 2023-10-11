@@ -83,11 +83,22 @@ a.sidebar-question-link:hover {
     border:2px solid #D5D5D5 !important;
 }
 
+input[type='radio']{
+    background-color:#1E3050;
+    color: #D5D5D5 !important;
+}
+
+.poll-form-option{
+    border-radius: 0.390rem;
+    color:#1E3050;
+    border: 1px solid #1E3050 !important;
+}
+
 .poll-form-option:hover{
     border-radius: 0.390rem;
     background-color: #D5D5D5 !important;
     cursor: pointer;
-    border: 1px solid #1E3050 !important;
+    border: 2px solid #D5D5D5 !important;
 }
 
 .poll-option-selected{
