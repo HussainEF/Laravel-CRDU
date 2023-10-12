@@ -12,7 +12,7 @@ $(document).ready(function(){
         </div>`;
     }
     
-    $("input[type='radio']").change(function() {
+    $("input[type='radio']").on("click", function() {
         var id=$(this).attr('id');
         var optionId;
         if(id==="opt1"){
@@ -28,11 +28,16 @@ $(document).ready(function(){
         }else {
             optionId=6;
         }
-            $("#option"+optionId).removeClass("poll-option-selected");
-            console.log("remove"+ optionId);
+
         if($(this).is(":checked")) {
-            console.log("add"+ optionId);
+            // console.log("add"+ optionId);
             $("#option"+optionId).addClass("poll-option-selected");
+            for(var i=1; i<=6; i++){
+                if(optionId!=i){
+                    $("#option"+i).removeClass("poll-option-selected");
+                    // console.log("remove"+ i);
+                }
+            }
         }
     });
 
@@ -68,7 +73,7 @@ $(document).ready(function(){
                 qid: q_id,
             },
             success: function (result) {
-                console.log(result);
+                // console.log(result);
                 $('#test').html(result);
             }
         });
