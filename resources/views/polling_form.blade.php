@@ -9,8 +9,9 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <form action="{{url('vote-submittion')}}" method="POST">
-                        @csrf
+                @foreach ($data as $data)
+                    <form method="post" action="{{route('vote-submittion', $data->id)}}">
+                    {{ csrf_field() }}
                         <div class="border-1 rounded ">
                             <div class="form-group mb-2">
                                 <label for="name">Name</label>
@@ -27,7 +28,6 @@
                         </div>
                         <hr>
                         <div class="poll-form-border rounded p-3">
-                            @foreach ($data as $data)
                             <h4 class="mb-5"><i class="fa-solid fa-square-poll-horizontal"></i> {{$data->question}} <i class="fa-regular fa-circle-question"></i></h4>
                             <div id="option1" class="form-row form-group mb-2 d-flex poll-form-option">
                                 <input id="opt1" type="radio" name="vote" value="1" class="col-md-2 rounded-start ps-1 pe-1 pt-2 pb-2 d-flex justify-content-center">
@@ -70,14 +70,14 @@
                                     Vote Count : 30
                                 </div>
                                 <div class="col-md-8 d-flex justify-content-end">
-                                    <button type="submit" name="submitButton" class="btn btn-style">Submit</button>
+                                    <button type="submit" name="submitButton" class="btn form-control btn-style"><i class="fa-solid fa-square-poll-vertical"></i> Poll</button>
                                 </div>
                             </div>
-                            @endforeach
                         </div>
                     </form>
+                 @endforeach
                 </div>
             </div>
-            <div id="data"></div>
         </div>
     </div>
+@endsection

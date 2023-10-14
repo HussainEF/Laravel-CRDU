@@ -41,5 +41,7 @@ Route::group(['middleware' => 'web'], function () {
 
 Route::post('poll-creation', 'App\Http\Controllers\QuestionController@pollCreation');
 Route::get('poll-data', 'App\Http\Controllers\AjaxController@pollData');
-Route::post('vote-submittion', 'App\Http\Controllers\AjaxController@voteSubmit');
-Route::get('polling/{id}', 'App\Http\Controllers\PollingController@pollForm')->name('polling');
+Route::get('delete-question', 'App\Http\Controllers\AjaxController@deleteQuestion');
+Route::post('vote-submittion/{qid}', 'App\Http\Controllers\AjaxController@voteSubmit')->name('vote-submittion');
+Route::post('polling/{id}', 'App\Http\Controllers\PollingController@pollForm')->name('polling');
+Route::get('delete-question/{q_id}', 'App\Http\Controllers\PollingController@pollForm');

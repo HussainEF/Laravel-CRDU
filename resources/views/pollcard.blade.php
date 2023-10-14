@@ -1,6 +1,7 @@
                     <div class="rounded show-poll p-3">
-                        <form action="">
-                            @foreach ($pollsData as $data)
+                    @foreach ($pollsData as $data)
+                        <form method="post" action="{{route('polling', $data->id)}}">
+                            {{ csrf_field() }}
                             <h4 class="mb-5"><i class="fa-solid fa-square-poll-horizontal"></i> {{$data->question}} <i class="fa-regular fa-circle-question"></i></h4>
                             <div class="form-row form-group mb-2 d-flex">
                                 <div class="col-md-2 rounded-start ps-1 pe-1 pt-2 pb-2 d-flex justify-content-center show-poll-option-number">Option-1</div>
@@ -40,13 +41,17 @@
                             </div>
                             <div class="form-row form-group d-flex mb-4">
                                 <div class="col-md-4 d-flex justify-content-center">
-                                    <a href="{{route('polling', $data->id)}}" class="btn btn-style"><i class="fa-solid fa-share"></i> Share</a>
+                                    <button type="submit" class="btn btn-style"><i class="fa-solid fa-share"></i> Share</button>
                                 </div>
                                 <div class="col-md-4 d-flex justify-content-center">
-                                    <button class="btn btn-style"><i class="fa-regular fa-pen-to-square"></i> Update</button> 
+                                    <button type="button" class="btn btn-style" data-bs-toggle="modal" data-bs-target="#updateModal"
+                                    data-data="{{$data->option1}}">
+                                        <i class="fa-regular fa-pen-to-square"></i> Update
+                                    </button> 
+                                    @include('update_poll')
                                 </div>
                                 <div class="col-md-4 d-flex justify-content-center">
-                                    <button class="btn btn-style"><i class="fa-solid fa-trash-can"></i> Delete</button>
+                                    <button type="button" onclick="deleteQuestion('delete-question', {{$data->id}})" class="btn btn-style"><i class="fa-solid fa-trash-can"></i> Delete</button>
                                 </div>
                             </div>
                             <div class="form-row form-group d-flex">
@@ -57,7 +62,7 @@
                                     {{$data->created_at}}
                                 </div>
                             </div>
-                            @endforeach
                         </form>
                     </div>
+                    @endforeach
 

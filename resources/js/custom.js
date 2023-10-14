@@ -78,4 +78,30 @@ $(document).ready(function(){
             }
         });
     }
+    window.deleteQuestion = deleteQuestion;
+    function deleteQuestion(route, q_id){
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+            }
+        });
+        $.ajax({
+            url: route,
+            method: 'GET',
+            data:{
+                qid: q_id,
+            },
+            success: function(){
+                location.reload();
+                alert("Poll Deleted Successfully");
+                // console.log("question deleted Successfully");
+            }
+        });
+    }
+
+    $('#updateModal').on('show.bs.modal', function(event){
+        var button = $(event.relatedTarget)
+        var id = button.data('data');
+        console.log(id);
+    });
 });
