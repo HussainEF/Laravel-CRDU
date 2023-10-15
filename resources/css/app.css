@@ -43,6 +43,12 @@
     outline: #1E3050;
 }
 
+.register-form, .login-form{
+    border: 2px solid #1E3050;
+    background-color: #D5D5D5;
+}
+
+
       
 /* CSS Style for Sidebar Question Link */
 .sidebar-question-link{
