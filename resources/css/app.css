@@ -69,19 +69,20 @@ a.sidebar-question-link:hover {
     border: 2px solid #D5D5D5;
 }
 
-.show-poll-option-number{
-    background-color:#1E3050;
+.option-number{
+    background-color:#1E3050 !important;
     border-left: 1px solid #1E3050;
     border-top: 1px solid #1E3050;
     border-bottom: 1px solid #1E3050;
     color: #D5D5D5 !important;
 }
 
-.show-poll-option-detail{
+.option-detail{
     color:#1E3050;
     border-right: 1px solid #1E3050 !important;
     border-top: 1px solid #1E3050 !important;
     border-bottom: 1px solid #1E3050 !important;
+    background-color: #D5D5D5 !important;
 }
 
 /* Styles for Pollig/Voting View */

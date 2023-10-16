@@ -78,6 +78,7 @@ $(document).ready(function(){
             }
         });
     }
+    
     window.deleteQuestion = deleteQuestion;
     function deleteQuestion(route, q_id){
         $.ajaxSetup({
@@ -98,10 +99,4 @@ $(document).ready(function(){
             }
         });
     }
-
-    $('#updateModal').on('show.bs.modal', function(event){
-        var button = $(event.relatedTarget)
-        var id = button.data('data');
-        console.log(id);
-    });
 });
